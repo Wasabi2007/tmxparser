@@ -31,6 +31,7 @@
 #include <vector>
 
 #include "TmxPropertySet.h"
+#include "TmxTileOffset.h"
 
 namespace tinyxml2 {
     class XMLNode;
@@ -88,6 +89,7 @@ namespace Tmx
         // Get a set of properties regarding the tile.
         const Tmx::PropertySet &GetProperties() const { return properties; }
 
+        const Tmx::TileOffset* GetTileOffset() const { return tileOffset; }
     private:
         int first_gid;
         
